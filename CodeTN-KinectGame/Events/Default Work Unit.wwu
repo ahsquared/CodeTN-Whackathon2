@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{53157FFE-B2EB-4634-81C0-16718DC13ED4}" SchemaVersion="72">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{53157FFE-B2EB-4634-81C0-16718DC13ED4}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="AcornHit" ID="{E63CEA7B-5B16-43AE-9E21-3CBA4F9660CA}">
+					<ChildrenList>
+						<Action Name="Play" ID="{D4F1D2F3-FE52-4038-A2DE-C5B7C0EB731E}" ShortID="723350946" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{5D257348-A7C5-479D-8DB5-330E3A1D278C}" Global="false">
+									<ObjectRef Name="368606__samsterbirdies__thump" ID="{E5A2D178-0DEA-4ED6-98EC-4EE511D11AD3}" WorkUnitID="{2CBB8001-6D70-40E4-B0BC-1F0AE12736D4}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bear_Facts_30_SEC_LOOP" ID="{5F9709A6-5F00-4562-842B-427CFF380618}">
+					<ChildrenList>
+						<Action Name="Play" ID="{CC3B10A8-05EC-4654-AB32-FED06BCE1911}" ShortID="595523091" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{814398C3-5E54-40FE-B195-998E86B59856}" Global="false">
+									<ObjectRef Name="Bear Facts 30 SEC LOOP" ID="{386811D6-0856-4457-B08A-D5F5215093FE}" WorkUnitID="{BA20685F-32F3-480C-9853-72B310B672CA}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Birdsong" ID="{AA395BA7-0F4B-45D0-BB5A-621F6C503CD0}">
+					<ChildrenList>
+						<Action Name="Play" ID="{241B63A4-37F4-4F54-B516-879BF5CA6BA0}" ShortID="366919461" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{E9661612-6C35-4137-8471-9E649E176B63}" Global="false">
+									<ObjectRef Name="VSFX003_05Forest With Bird Song and Crow_aif" ID="{28BE278F-7A8F-4C7F-87D2-D0E0B3A75A91}" WorkUnitID="{2CBB8001-6D70-40E4-B0BC-1F0AE12736D4}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Crickets" ID="{4BABD1C9-76CD-4746-AA8A-F97837B84E7B}">
+					<ChildrenList>
+						<Action Name="Play" ID="{AD8FEA2E-7423-45C0-B71B-95C3DC67FF78}" ShortID="440430957" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{73E82F68-9079-4A81-BB46-8C34AF9F73E3}" Global="false">
+									<ObjectRef Name="VSFX027_01Jar Flies_aif" ID="{3EA87BA0-2378-4D68-9076-1980004631DD}" WorkUnitID="{2CBB8001-6D70-40E4-B0BC-1F0AE12736D4}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="AcornHits" ID="{9CFE2F57-80FE-4A65-AB7A-2EFCAD0A4F3E}">
+					<ChildrenList>
+						<Action Name="Play" ID="{1D06BA92-0377-454D-98C0-DCC3F2F0F69E}" ShortID="88443505" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B41CD1A2-4ADA-4378-8CE7-1D9CD680743C}" Global="false">
+									<ObjectRef Name="AcornHits" ID="{F26A43E3-D3E5-4BB0-8C58-F4351C12AD89}" WorkUnitID="{2CBB8001-6D70-40E4-B0BC-1F0AE12736D4}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

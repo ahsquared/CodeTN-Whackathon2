@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{43A4C508-129C-4F83-B85F-EC5524C2F750}" SchemaVersion="72">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{43A4C508-129C-4F83-B85F-EC5524C2F750}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Velocity" ID="{6262614D-08AC-417D-88A2-7C9219C78E7C}"/>
+				<GameParameter Name="GamePercentage" ID="{E2E32148-714A-4C78-A00B-53733EF6A552}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

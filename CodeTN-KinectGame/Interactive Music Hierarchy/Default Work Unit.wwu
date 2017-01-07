@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BA20685F-32F3-480C-9853-72B310B672CA}" SchemaVersion="72">
+	<InteractiveMusic>
+		<WorkUnit Name="Default Work Unit" ID="{BA20685F-32F3-480C-9853-72B310B672CA}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSegment Name="Bear Facts 30 SEC LOOP" ID="{386811D6-0856-4457-B08A-D5F5215093FE}" ShortID="698035980">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="32631.6016081871"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+						</Reference>
+						<Reference Name="Effect0">
+							<Custom>
+								<Effect Name="Wwise Time Stretch (Custom)" ID="{66F49FD9-C299-4609-8927-32EBEFDF9477}" ShortID="70083276" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+									<PropertyList>
+										<Property Name="TimeStretch" Type="Real32">
+											<RTPCList>
+												<RTPC Name="" ID="{8969CFC7-3078-4CE7-9F7D-E1DA3BF787E5}" ShortID="394730548">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="GamePercentage" ID="{E2E32148-714A-4C78-A00B-53733EF6A552}" WorkUnitID="{43A4C508-129C-4F83-B85F-EC5524C2F750}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{938E0A68-26CE-4A2F-A19C-0C05F5CD1A96}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>100</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>60</XPos>
+																<YPos>80</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>50.12677</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+								</Effect>
+							</Custom>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Bear Facts 30 SEC LOOP" ID="{035CD5DF-365C-43E4-9A03-4CB900EB693F}" ShortID="963442327">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bear Facts 30 SEC LOOP" ID="{DD76DFC6-C068-4D7F-9C1B-D87017B9CA58}" ShortID="562613793">
+									<Language>SFX</Language>
+									<AudioFile>Bear Facts 30 SEC LOOP.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{65231118-03DF-41C8-8FB3-2C64E51FBBC8}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{021DA187-D75F-4213-AC9B-EB7795EC7C54}">
+									<ClipList>
+										<MusicClip Name="Bear Facts 30 SEC LOOP" ID="{9F24E122-20B9-4DF3-8C22-0C07A3DCA0E7}">
+											<PropertyList>
+												<Property Name="BeginTrimOffset" Type="Real64" Value="-2.77888823063677E-13"/>
+												<Property Name="EndTrimOffset" Type="Real64" Value="30000.0208333333"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+												<Property Name="PlayAt" Type="Real64" Value="2.77888823063677E-13"/>
+											</PropertyList>
+											<AudioSourceRef Name="Bear Facts 30 SEC LOOP" ID="{DD76DFC6-C068-4D7F-9C1B-D87017B9CA58}"/>
+											<PropertyCurveList>
+												<PropertyCurve PropertyName="Highpass">
+													<Curve Name="" ID="{AB24036D-4B8C-4550-B080-A14E1663E23F}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>30.0000208333333</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</PropertyCurve>
+												<PropertyCurve PropertyName="Lowpass">
+													<Curve Name="" ID="{ECBCEA28-A18E-4C5A-8AF0-A3F63AB38263}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>30.0000208333333</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</PropertyCurve>
+												<PropertyCurve PropertyName="Volume">
+													<Curve Name="" ID="{C1C3F455-D15F-4E65-87AF-C1987939C837}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>30.0000208333333</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</PropertyCurve>
+											</PropertyCurveList>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{28CC061B-3E03-48FD-81B3-5452C30F89CD}"/>
+						<MusicCue Name="Exit Cue" ID="{F8715057-9A05-426D-8B20-A0F62A2E9F85}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="30000.0208333333"/>
+							</PropertyList>
+						</MusicCue>
+						<MusicCue Name="FirstSpeedUp" ID="{B88F6522-86CA-45DF-A258-B50642138D3A}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="2"/>
+								<Property Name="TimeMs" Type="Real64" Value="19999.5325755327"/>
+							</PropertyList>
+						</MusicCue>
+						<MusicCue Name="Test" ID="{D2CD0483-4C58-484B-875B-1C9D5C358A2A}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="2"/>
+								<Property Name="TimeMs" Type="Real64" Value="1717.45271622037"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+				<MusicSegment Name="Bear Facts BASS STINGS_aif" ID="{9BBD5EA8-9AAD-4500-9601-44840FF1D379}" ShortID="494156390">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="20000.0208333333"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Bear Facts BASS STINGS_aif" ID="{CFD337B1-D2DA-4D0F-847C-8CC22E588FDC}" ShortID="988049242">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bear Facts BASS STINGS_aif" ID="{14A57980-72F2-4DAD-AD33-93081CFD6DCF}" ShortID="422143266">
+									<Language>SFX</Language>
+									<AudioFile>Bear Facts BASS STINGS.aif.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{5A90CD2D-0577-4046-B851-6B454E5F0481}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{F4CBE053-5C70-45CE-BFFA-99623B7BCCDA}">
+									<ClipList>
+										<MusicClip Name="Bear Facts BASS STINGS_aif" ID="{03D89AA9-EAE2-458D-8016-B8BB93BCA97C}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="20000.0208333333"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="Bear Facts BASS STINGS_aif" ID="{14A57980-72F2-4DAD-AD33-93081CFD6DCF}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{7605D004-5EB4-4794-A4E5-68F6E5FC8BB0}"/>
+						<MusicCue Name="Exit Cue" ID="{4CE1C4CE-5608-47CE-A64F-ED254ED87742}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="20000.0208333333"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+				<MusicSegment Name="Bear Facts SIMPLE 4 Bar LOOP" ID="{F5500FEC-CBBE-4726-AFD5-5EB398ACE630}" ShortID="189470126">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="10666.6875"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Bear Facts SIMPLE 4 Bar LOOP" ID="{54101CF0-141E-4385-BE84-5FA955ACDD5B}" ShortID="751131834">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bear Facts SIMPLE 4 Bar LOOP" ID="{39D7D0E0-E522-4191-AEDA-FF8C9DB6494B}" ShortID="281140735">
+									<Language>SFX</Language>
+									<AudioFile>Bear Facts SIMPLE 4 Bar LOOP.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{E040CC41-2B37-4083-99AC-33704F2F96FC}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{871F4CF0-761C-43D1-8267-2205BD589474}">
+									<ClipList>
+										<MusicClip Name="Bear Facts SIMPLE 4 Bar LOOP" ID="{63C5CA5C-2F10-4485-B9B3-85F6B7C58EBA}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="10666.6875"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="Bear Facts SIMPLE 4 Bar LOOP" ID="{39D7D0E0-E522-4191-AEDA-FF8C9DB6494B}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{E7902CE4-F3F5-4273-941C-DD31818D8352}"/>
+						<MusicCue Name="Exit Cue" ID="{805F19C9-0D3B-47B6-A153-D423FBEEF3F1}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="10666.6875"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+				<MusicSegment Name="Bear Facts SIMPLE LOOP with Ending" ID="{C98B80E7-6D51-42E4-81E3-EA9EE4F2DEC8}" ShortID="779657599">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="28641.8958333333"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Bear Facts SIMPLE LOOP with Ending" ID="{9CFFEDD7-4FAA-4BF8-90D0-97C38D7C1DCB}" ShortID="898434650">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bear Facts SIMPLE LOOP with Ending" ID="{A2E21B79-2CD9-4158-9184-8EBD490A2A8F}" ShortID="397828337">
+									<Language>SFX</Language>
+									<AudioFile>Bear Facts SIMPLE LOOP with Ending.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{8921382E-F0E4-4BCD-A183-DEFC687675C6}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{2DD712D4-9AF6-4D63-8C56-AA403C37D581}">
+									<ClipList>
+										<MusicClip Name="Bear Facts SIMPLE LOOP with Ending" ID="{4D4996E5-C50E-4A5B-8874-4D63433022F7}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="28641.8958333333"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="Bear Facts SIMPLE LOOP with Ending" ID="{A2E21B79-2CD9-4158-9184-8EBD490A2A8F}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{076168D2-1DAF-4F0D-BB26-F4C713F6F9C1}"/>
+						<MusicCue Name="Exit Cue" ID="{6DB390E7-93BD-43A7-8C99-F881C0712F3C}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="28641.8958333333"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+				<MusicSegment Name="Bear Facts Song for loop_aif" ID="{1F83CCE7-1C0B-4B7E-800D-6A402D5220C2}" ShortID="496251208">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="53333.3541666667"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Bear Facts Song for loop_aif" ID="{00F06A81-3554-4332-BE42-A766FF396223}" ShortID="448153833">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bear Facts Song for loop_aif" ID="{23C6D999-5D25-4E17-B0D4-606CC332D0DF}" ShortID="736847480">
+									<Language>SFX</Language>
+									<AudioFile>Bear Facts Song for loop.aif.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{6D2BBEA0-D2BE-4B2D-9AAC-6CC927B13BC6}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{42D3649F-20FB-43B9-AA5F-6EC0E42B6E6E}">
+									<ClipList>
+										<MusicClip Name="Bear Facts Song for loop_aif" ID="{A7FD6818-67B8-4EF7-A7A2-6447D9ACC033}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="53333.3541666667"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="Bear Facts Song for loop_aif" ID="{23C6D999-5D25-4E17-B0D4-606CC332D0DF}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{0424AA21-8B09-41FD-BDB2-FC3BAF6906A7}"/>
+						<MusicCue Name="Exit Cue" ID="{51F1D645-7C57-4CD0-B229-392936733D62}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="53333.3541666667"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+				<MusicSegment Name="Bear Facts Winner Idea 1" ID="{B3F240AA-1F23-4063-AFC4-9F80F9EAE8E7}" ShortID="1025368442">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="9977.25"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Bear Facts Winner Idea 1" ID="{AB6CB216-09EB-42FF-BCA2-6800D8C30A99}" ShortID="260558114">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Bear Facts Winner Idea 1" ID="{5BBFB5CC-0B95-4FA7-AEF6-FE278B766FBB}" ShortID="99480688">
+									<Language>SFX</Language>
+									<AudioFile>Bear Facts Winner Idea 1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{A06D6A6A-39CD-4D54-AB76-D4CD5628B8B1}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{D621B114-1706-4CC4-A15F-D4B7F9FE72F0}">
+									<ClipList>
+										<MusicClip Name="Bear Facts Winner Idea 1" ID="{47D6DBC6-53DA-412A-8EAB-CA665100F193}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="9977.25"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="Bear Facts Winner Idea 1" ID="{5BBFB5CC-0B95-4FA7-AEF6-FE278B766FBB}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{D4592DA1-F6C0-46B3-8553-9E3A85882964}"/>
+						<MusicCue Name="Exit Cue" ID="{0A7AF4FC-C370-4CEB-9790-80F6FDFF90EC}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="9977.25"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>

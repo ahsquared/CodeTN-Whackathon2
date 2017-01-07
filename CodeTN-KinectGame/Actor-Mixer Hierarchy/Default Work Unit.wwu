@@ -191,28 +191,14 @@
 						<ActiveSource Name="VSFX005_03Footsteps On Ice_aif" ID="{9F801777-D6C1-4323-844D-70D11A7BC51A}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="VSFX005_05Footsteps Through The Woods_aif" ID="{22DCBEBE-F983-491C-9F48-4363E2A721BF}" ShortID="199172869" Type="SoundFX">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="VSFX005_05Footsteps Through The Woods_aif" ID="{E42FB9E7-D1A6-4A0C-97AC-4C82CAA202B1}" ShortID="772259859">
-							<Language>SFX</Language>
-							<AudioFile>VSFX005_05Footsteps Through The Woods.aif.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="VSFX005_05Footsteps Through The Woods_aif" ID="{E42FB9E7-D1A6-4A0C-97AC-4C82CAA202B1}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="VSFX027_01Jar Flies_aif" ID="{3EA87BA0-2378-4D68-9076-1980004631DD}" ShortID="115944679" Type="SoundFX">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -430,6 +416,9 @@
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
 						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+							<ObjectRef Name="Big_Garage1" ID="{172402A8-22F4-40FC-BE1D-5269594CB633}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
 						</Reference>
@@ -487,6 +476,11 @@
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
 								<Value>-1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -703,6 +697,150 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="VSFX033_01Lip Pop_aif" ID="{E744F160-BEFA-4084-883F-8BFC7AC5CC99}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Feet" ID="{AEAAD440-6FC9-4D10-ABAA-2C2686660AD2}" ShortID="1061475440">
+					<PropertyList>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{5A05CB6F-EC58-4007-918C-9257DDCFCA1F}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="VSFX005_05Footsteps Through The Woods_aif" ID="{22DCBEBE-F983-491C-9F48-4363E2A721BF}" ShortID="199172869" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VSFX005_05Footsteps Through The Woods_aif" ID="{E42FB9E7-D1A6-4A0C-97AC-4C82CAA202B1}" ShortID="772259859">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.630775273804118"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>VSFX005_05Footsteps Through The Woods.aif.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VSFX005_05Footsteps Through The Woods_aif" ID="{E42FB9E7-D1A6-4A0C-97AC-4C82CAA202B1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VSFX005_05Footsteps Through The Woods_aif_01" ID="{F81FE20F-3831-439C-81A5-E0BC5B2681D1}" ShortID="586675829" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VSFX005_05Footsteps Through The Woods_aif" ID="{7981AAF8-59C9-4A9F-B097-AD83F58446D0}" ShortID="678498466">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.631116491630438"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.06753409154144"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>VSFX005_05Footsteps Through The Woods.aif.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VSFX005_05Footsteps Through The Woods_aif" ID="{7981AAF8-59C9-4A9F-B097-AD83F58446D0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VSFX005_05Footsteps Through The Woods_aif_02" ID="{EF153980-962C-4485-8CA8-98205E6FFCC8}" ShortID="1068087570" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VSFX005_05Footsteps Through The Woods_aif" ID="{C41FDEE4-3D8F-4762-812F-C0E310B89294}" ShortID="332162689">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.38251935075712"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.03950015362548"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>VSFX005_05Footsteps Through The Woods.aif.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VSFX005_05Footsteps Through The Woods_aif" ID="{C41FDEE4-3D8F-4762-812F-C0E310B89294}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VSFX005_05Footsteps Through The Woods_aif_03" ID="{014248F1-2180-4103-B905-412237A5B4F0}" ShortID="673283574" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VSFX005_05Footsteps Through The Woods_aif" ID="{4C04D369-266E-4AAC-9147-4F23B9EA3885}" ShortID="268510138">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.00162497489978"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.70118976249753"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>VSFX005_05Footsteps Through The Woods.aif.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VSFX005_05Footsteps Through The Woods_aif" ID="{4C04D369-266E-4AAC-9147-4F23B9EA3885}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VSFX005_05Footsteps Through The Woods_aif_04" ID="{7C0BA8A7-C558-410B-9073-75B4D0A9A089}" ShortID="525186320" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VSFX005_05Footsteps Through The Woods_aif" ID="{CADBAC88-0AEA-4954-874F-BF11120855BC}" ShortID="221277929">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.70180395458493"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.32766569168951"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>VSFX005_05Footsteps Through The Woods.aif.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VSFX005_05Footsteps Through The Woods_aif" ID="{CADBAC88-0AEA-4954-874F-BF11120855BC}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

@@ -19,16 +19,11 @@ public class GameManager : AudioEvents {
     public GameObject Tie;
     public GameObject Instructions;
     public GameObject Sponsors;
-
-    void Awake()
-    {
-        
-    }
+    
 
     // Use this for initialization
     void Start ()
     {
-        AkSoundEngine.RegisterGameObj(gameObject);
         PlayAmbientSound();
         StartGame();
     }
@@ -76,7 +71,7 @@ public class GameManager : AudioEvents {
         ResetScores();
         Instructions.SetActive(false);
         SetRTPCValue("GameTime", 0);
-        PlayEvent("Play_Bear_Facts_30_SEC_LOOP");
+        PlayEvent("Play_Bear_Facts_30_SEC_LOOP", true);
         GameObject.Find("ByronEmitter").GetComponent<BallEmitter>().StartEmitting();
         GameObject.Find("SmokeyEmitter").GetComponent<BallEmitter>().StartEmitting();
         TimersManager.SetTimer(this, GameDuration, EndGame);
@@ -114,6 +109,7 @@ public class GameManager : AudioEvents {
         {
             Tie.SetActive(true);
         }
+        PlayEvent("BearWin");
         TimersManager.SetTimer(this, 5f, ResetGame);
     }
 

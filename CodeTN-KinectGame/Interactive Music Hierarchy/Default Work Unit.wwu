@@ -168,12 +168,6 @@
 								<Property Name="TimeMs" Type="Real64" Value="19999.5325755327"/>
 							</PropertyList>
 						</MusicCue>
-						<MusicCue Name="Test" ID="{D2CD0483-4C58-484B-875B-1C9D5C358A2A}">
-							<PropertyList>
-								<Property Name="CueType" Type="int16" Value="2"/>
-								<Property Name="TimeMs" Type="Real64" Value="1717.45271622037"/>
-							</PropertyList>
-						</MusicCue>
 					</CueList>
 				</MusicSegment>
 				<MusicSegment Name="Bear Facts BASS STINGS_aif" ID="{9BBD5EA8-9AAD-4500-9601-44840FF1D379}" ShortID="494156390">

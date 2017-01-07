@@ -42,9 +42,8 @@ public class Ball : AudioEvents {
             gameObject.GetComponentInChildren<MeshRenderer>().material.SetColor("_EmissionColor", new Color(0.964f, 0.8f, 0.262f));
             gameObject.GetComponent<Rigidbody>().AddForce(collision.impulse, ForceMode.Impulse);
             GameObject.Find("GameManager").GetComponent<GameManager>().UpdateScore(collision.gameObject.name);
+            PlayEvent("AcornHits");
         }
-        SetRTPCValue("Velocity", Random.Range(0, 100));
-        PlayEvent("AcornHits");
     }
 
     private IEnumerator LaunchBall(float waitTime)

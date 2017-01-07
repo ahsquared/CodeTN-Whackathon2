@@ -1,8 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
 	253386786	AcornHits			\Default Work Unit\AcornHits	
 	1443984213	Crickets			\Default Work Unit\Crickets	
+	2000967603	BearWin			\Default Work Unit\BearWin	
 	2317268941	Play_Bear_Facts_30_SEC_LOOP			\Default Work Unit\Play_Bear_Facts_30_SEC_LOOP	
 	2632570123	AcornHit			\Default Work Unit\AcornHit	
+	2830079466	Play_Feet			\Default Work Unit\Play_Feet	
 	3886820807	Birdsong			\Default Work Unit\Birdsong	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -12,11 +14,18 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 Effect plug-ins	ID	Name	Type				Notes
 	70083276	Wwise Time Stretch (Custom)	Wwise Time Stretch			
 	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+	3546444380	Big_Garage1	Wwise Matrix Reverb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	221277929	VSFX005_05Footsteps Through The Woods_aif_04	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\VSFX005_05Footsteps Through The Woods.aif_478CEFA7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Feet\VSFX005_05Footsteps Through The Woods_aif_04		120228
+	268510138	VSFX005_05Footsteps Through The Woods_aif_03	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\VSFX005_05Footsteps Through The Woods.aif_B7D3CB46.wem		\Actor-Mixer Hierarchy\Default Work Unit\Feet\VSFX005_05Footsteps Through The Woods_aif_03		134380
 	291937973	VSFX027_01Jar Flies_aif	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\VSFX027_01Jar Flies.aif_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\VSFX027_01Jar Flies_aif		30416960
+	332162689	VSFX005_05Footsteps Through The Woods_aif_02	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\VSFX005_05Footsteps Through The Woods.aif_9BEF1296.wem		\Actor-Mixer Hierarchy\Default Work Unit\Feet\VSFX005_05Footsteps Through The Woods_aif_02		126204
 	403401549	VSFX003_05Forest With Bird Song and Crow_aif	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\VSFX003_05Forest With Bird Song and Crow.aif_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\VSFX003_05Forest With Bird Song and Crow_aif		23371840
+	532558446	WINNINGSFX_BEARGAME	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\WINNINGSFX_BEARGAME_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\WINNINGSFX_BEARGAME		560048
 	562613793	Bear Facts 30 SEC LOOP	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\Bear Facts 30 SEC LOOP_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\Bear Facts 30 SEC LOOP\Bear Facts 30 SEC LOOP		5760068
+	678498466	VSFX005_05Footsteps Through The Woods_aif_01	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\VSFX005_05Footsteps Through The Woods.aif_0ED9A011.wem		\Actor-Mixer Hierarchy\Default Work Unit\Feet\VSFX005_05Footsteps Through The Woods_aif_01		83852
+	772259859	VSFX005_05Footsteps Through The Woods_aif	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\VSFX005_05Footsteps Through The Woods.aif_80C5C184.wem		\Actor-Mixer Hierarchy\Default Work Unit\Feet\VSFX005_05Footsteps Through The Woods_aif		121172
 	878642591	368606__samsterbirdies__thump	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\368606__samsterbirdies__thump_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\368606__samsterbirdies__thump		13724
 	970200051	VSFX033_01Lip Pop_aif	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\VSFX033_01Lip Pop.aif_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\AcornHits\VSFX033_01Lip Pop_aif		229440
 

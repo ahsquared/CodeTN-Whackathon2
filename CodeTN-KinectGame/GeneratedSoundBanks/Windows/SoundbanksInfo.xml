@@ -23,22 +23,48 @@
 			<IncludedEvents>
 				<Event Id="2632570123" Name="AcornHit" ObjectPath="\Events\Default Work Unit\AcornHit"/>
 				<Event Id="253386786" Name="AcornHits" ObjectPath="\Events\Default Work Unit\AcornHits"/>
+				<Event Id="2000967603" Name="BearWin" ObjectPath="\Events\Default Work Unit\BearWin"/>
 				<Event Id="3886820807" Name="Birdsong" ObjectPath="\Events\Default Work Unit\Birdsong"/>
 				<Event Id="1443984213" Name="Crickets" ObjectPath="\Events\Default Work Unit\Crickets"/>
 				<Event Id="2317268941" Name="Play_Bear_Facts_30_SEC_LOOP" ObjectPath="\Events\Default Work Unit\Play_Bear_Facts_30_SEC_LOOP"/>
+				<Event Id="2830079466" Name="Play_Feet" ObjectPath="\Events\Default Work Unit\Play_Feet"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="221277929" Language="SFX">
+					<ShortName>VSFX005_05Footsteps Through The Woods.aif.wav</ShortName>
+					<Path>SFX\VSFX005_05Footsteps Through The Woods.aif_478CEFA7.wem</Path>
+				</File>
+				<File Id="268510138" Language="SFX">
+					<ShortName>VSFX005_05Footsteps Through The Woods.aif.wav</ShortName>
+					<Path>SFX\VSFX005_05Footsteps Through The Woods.aif_B7D3CB46.wem</Path>
+				</File>
 				<File Id="291937973" Language="SFX">
 					<ShortName>VSFX027_01Jar Flies.aif.wav</ShortName>
 					<Path>SFX\VSFX027_01Jar Flies.aif_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="332162689" Language="SFX">
+					<ShortName>VSFX005_05Footsteps Through The Woods.aif.wav</ShortName>
+					<Path>SFX\VSFX005_05Footsteps Through The Woods.aif_9BEF1296.wem</Path>
 				</File>
 				<File Id="403401549" Language="SFX">
 					<ShortName>VSFX003_05Forest With Bird Song and Crow.aif.wav</ShortName>
 					<Path>SFX\VSFX003_05Forest With Bird Song and Crow.aif_4B8CC0C5.wem</Path>
 				</File>
+				<File Id="532558446" Language="SFX">
+					<ShortName>WINNINGSFX_BEARGAME.wav</ShortName>
+					<Path>SFX\WINNINGSFX_BEARGAME_9E69E797.wem</Path>
+				</File>
 				<File Id="562613793" Language="SFX">
 					<ShortName>Bear Facts 30 SEC LOOP.wav</ShortName>
 					<Path>SFX\Bear Facts 30 SEC LOOP_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="678498466" Language="SFX">
+					<ShortName>VSFX005_05Footsteps Through The Woods.aif.wav</ShortName>
+					<Path>SFX\VSFX005_05Footsteps Through The Woods.aif_0ED9A011.wem</Path>
+				</File>
+				<File Id="772259859" Language="SFX">
+					<ShortName>VSFX005_05Footsteps Through The Woods.aif.wav</ShortName>
+					<Path>SFX\VSFX005_05Footsteps Through The Woods.aif_80C5C184.wem</Path>
 				</File>
 				<File Id="878642591" Language="SFX">
 					<ShortName>368606__samsterbirdies__thump.wav</ShortName>

@@ -19,16 +19,23 @@ public class AudioEvents : MonoBehaviour {
 		
 	}
 
-    public void PlayEvent(string eventName)
+    public void PlayEvent(string eventName, bool callback = false)
     {
-        AkSoundEngine.PostEvent(eventName, gameObject, (uint)AkCallbackType.AK_MusicSyncUserCue, MusicCallback, this);
+        if (callback)
+        {
+            AkSoundEngine.PostEvent(eventName, gameObject,
+                (uint) AkCallbackType.AK_MusicSyncUserCue | (uint) AkCallbackType.AK_EndOfEvent, MusicCallback, this);
+        }
+        else
+        {
+            AkSoundEngine.PostEvent(eventName, gameObject);
+        }
     }
 
     private void MusicCallback(object in_cookie, AkCallbackType in_type, object in_info)
     {
 
         if (in_type == AkCallbackType.AK_MusicSyncUserCue)
-
         {
             Debug.Log(in_cookie);
             Debug.Log(in_type);
@@ -37,18 +44,22 @@ public class AudioEvents : MonoBehaviour {
             Debug.Log("cue time: " + musicInfo.segmentInfo.iCurrentPosition + " , duration: " + musicInfo.segmentInfo.iActiveDuration);
             int cueTime = musicInfo.segmentInfo.iCurrentPosition;
             int duration = musicInfo.segmentInfo.iActiveDuration;
-            if (10000 < cueTime && cueTime < 21000)
-            {
-                iTween.ValueTo(gameObject, iTween.Hash(
-                    "from", 0f,
-                    "to", 100f,
-                    "time", 8f,
-                    "onupdatetarget", gameObject,
-                    "onupdate", "tweenTimeStretch",
-                    "easetype", iTween.EaseType.easeOutQuad
-                    )
-                );
-            }
+            
+            iTween.ValueTo(gameObject, iTween.Hash(
+                "from", 0f,
+                "to", 100f,
+                "time", 8f,
+                "onupdatetarget", gameObject,
+                "onupdate", "tweenTimeStretch",
+                "easetype", iTween.EaseType.easeOutQuad
+                )
+            );
+            
+        }
+        if (in_type == AkCallbackType.AK_EndOfEvent)
+        {
+            Debug.Log("End of event");
+            SetRTPCValue("GamePercentage", 0);
         }
 
     }

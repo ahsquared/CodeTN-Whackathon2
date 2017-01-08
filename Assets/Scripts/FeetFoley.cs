@@ -28,7 +28,7 @@ public class FeetFoley : AudioEvents, KinectGestures.GestureListenerInterface
 
     public void UserDetected(long userId, int userIndex)
     {
-        Debug.Log("user detected: " + userId + ", index: " + userIndex);
+        Debug.Log("user detected: " + userId + ", index: " + userIndex + ", playerIndex: " + _playerIndex);
         if (userIndex != _playerIndex)
             return;
 

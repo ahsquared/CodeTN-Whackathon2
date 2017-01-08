@@ -13,6 +13,8 @@ public class GameManager : AudioEvents
     private int _clockTime = 0;
     private bool _gameRunning;
     private Text _instructionsTimerText;
+    private KinectManager _kinectManager;
+
     [Range(0, 60)]
     public int GameDuration = 30;
 
@@ -28,6 +30,7 @@ public class GameManager : AudioEvents
     // Use this for initialization
     void Start ()
     {
+        _kinectManager = GameObject.Find("KinectController").GetComponent<KinectManager>();
         _instructionsTimerText = GameObject.Find("InstructionsTimer").GetComponent<Text>();
         _instructionsTimerText.text = Countdown.ToString(CultureInfo.InvariantCulture);
         PlayAmbientSound();
@@ -51,6 +54,7 @@ public class GameManager : AudioEvents
         _clockTime = Countdown;
         TimersManager.SetLoopableTimer(this, 1.0f, UpdateClock);
         _gameRunning = true;
+        _kinectManager.displayUserMap = false;
     }
 
     void UpdateClock()
@@ -69,7 +73,7 @@ public class GameManager : AudioEvents
 
     bool GetPlayerReadyStatus()
     {
-        return ByronActive || SmokeyActive;
+        return ByronActive && SmokeyActive;
     }
 
     public void UpdatePlayer(string player, bool playerState)
@@ -111,6 +115,7 @@ public class GameManager : AudioEvents
         _clockTime = Countdown;
         Instructions.SetActive(true);
         _instructionsTimerText.text = Countdown.ToString(CultureInfo.InvariantCulture);
+        _kinectManager.displayUserMap = true;
         if (GetPlayerReadyStatus())
         {
             StartGame();

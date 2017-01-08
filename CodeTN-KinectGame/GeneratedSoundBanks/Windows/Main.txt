@@ -4,8 +4,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	2000967603	BearWin			\Default Work Unit\BearWin	
 	2317268941	Play_Bear_Facts_30_SEC_LOOP			\Default Work Unit\Play_Bear_Facts_30_SEC_LOOP	
 	2632570123	AcornHit			\Default Work Unit\AcornHit	
-	2830079466	Play_Feet			\Default Work Unit\Play_Feet	
+	2869295439	Play_Feet_Byron			\Default Work Unit\Play_Feet_Byron	
 	3886820807	Birdsong			\Default Work Unit\Birdsong	
+	4214561933	Play_Feet_Smokey			\Default Work Unit\Play_Feet_Smokey	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	3432825351	GamePercentage			\Default Work Unit\GamePercentage	

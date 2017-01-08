@@ -9,9 +9,10 @@
 						<ObjectRef Name="Play_Bear_Facts_30_SEC_LOOP" ID="{5F9709A6-5F00-4562-842B-427CFF380618}" WorkUnitID="{53157FFE-B2EB-4634-81C0-16718DC13ED4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Birdsong" ID="{AA395BA7-0F4B-45D0-BB5A-621F6C503CD0}" WorkUnitID="{53157FFE-B2EB-4634-81C0-16718DC13ED4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Crickets" ID="{4BABD1C9-76CD-4746-AA8A-F97837B84E7B}" WorkUnitID="{53157FFE-B2EB-4634-81C0-16718DC13ED4}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Feet_Smokey" ID="{C3F5F1CB-D095-4A04-94FE-38D16937A712}" WorkUnitID="{53157FFE-B2EB-4634-81C0-16718DC13ED4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="AcornHits" ID="{9CFE2F57-80FE-4A65-AB7A-2EFCAD0A4F3E}" WorkUnitID="{53157FFE-B2EB-4634-81C0-16718DC13ED4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="BearWin" ID="{E9084D75-1CFD-4B59-B146-D1483F69C3B5}" WorkUnitID="{53157FFE-B2EB-4634-81C0-16718DC13ED4}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Play_Feet" ID="{07888B44-BE24-4E7D-8D52-9ACA5366DB87}" WorkUnitID="{53157FFE-B2EB-4634-81C0-16718DC13ED4}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Feet_Byron" ID="{07888B44-BE24-4E7D-8D52-9ACA5366DB87}" WorkUnitID="{53157FFE-B2EB-4634-81C0-16718DC13ED4}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

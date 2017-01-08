@@ -58,7 +58,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Feet" ID="{07888B44-BE24-4E7D-8D52-9ACA5366DB87}">
+				<Event Name="Play_Feet_Byron" ID="{07888B44-BE24-4E7D-8D52-9ACA5366DB87}">
 					<ChildrenList>
 						<Action Name="Play" ID="{643B023A-5CC6-4D3D-AD08-97BCE307A07B}" ShortID="563036091" Type="Play" Scope="One" Global="false">
 							<ElementList>
@@ -75,6 +75,17 @@
 							<ElementList>
 								<Element ID="{8728BA27-C377-4C43-B513-74D13959D18B}" Global="false">
 									<ObjectRef Name="WINNINGSFX_BEARGAME" ID="{782DAD23-A84D-4D83-A890-3717E85CF0C9}" WorkUnitID="{2CBB8001-6D70-40E4-B0BC-1F0AE12736D4}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Feet_Smokey" ID="{C3F5F1CB-D095-4A04-94FE-38D16937A712}">
+					<ChildrenList>
+						<Action Name="Play" ID="{B4B6FFEC-C6A6-4FD7-87C1-584E328D5D06}" ShortID="1066250555" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{A83CFA2E-3FF0-41D1-B77B-6221F769EF9A}" Global="false">
+									<ObjectRef Name="Feet" ID="{AEAAD440-6FC9-4D10-ABAA-2C2686660AD2}" WorkUnitID="{2CBB8001-6D70-40E4-B0BC-1F0AE12736D4}"/>
 								</Element>
 							</ElementList>
 						</Action>

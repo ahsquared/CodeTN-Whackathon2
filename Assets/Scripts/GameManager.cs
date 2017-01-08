@@ -5,11 +5,14 @@ using UnityEngine;
 using Timers;
 using UnityEngine.UI;
 
-public class GameManager : AudioEvents {
+public class GameManager : AudioEvents
+{
 
     private int _byronScore = 0;
     private int _smokeyScore = 0;
     private int _clockTime = 0;
+    private bool _gameRunning;
+    private Text _instructionsTimerText;
     [Range(0, 60)]
     public int GameDuration = 30;
 
@@ -19,13 +22,16 @@ public class GameManager : AudioEvents {
     public GameObject Tie;
     public GameObject Instructions;
     public GameObject Sponsors;
-    
+    public bool ByronActive;
+    public bool SmokeyActive;
 
     // Use this for initialization
     void Start ()
     {
+        _instructionsTimerText = GameObject.Find("InstructionsTimer").GetComponent<Text>();
+        _instructionsTimerText.text = Countdown.ToString(CultureInfo.InvariantCulture);
         PlayAmbientSound();
-        StartGame();
+        //StartGame();
     }
 
     private void PlayAmbientSound()
@@ -35,8 +41,8 @@ public class GameManager : AudioEvents {
 
     // Update is called once per frame
 	void Update () {
-		
-	}
+       
+    }
 
     void StartGame()
     {
@@ -44,24 +50,47 @@ public class GameManager : AudioEvents {
         _smokeyScore = 0;
         _clockTime = Countdown;
         TimersManager.SetLoopableTimer(this, 1.0f, UpdateClock);
+        _gameRunning = true;
     }
 
     void UpdateClock()
     {
         _clockTime -= 1;
-        if (_clockTime == 0)
+        if (_clockTime == 0 )
         {
             PlayGame();
         }
         else if (_clockTime > 0)
         {
-            GameObject.Find("InstructionsTimer").GetComponent<Text>().text = _clockTime.ToString(CultureInfo.InvariantCulture);
+            _instructionsTimerText.text = _clockTime.ToString(CultureInfo.InvariantCulture);
         }
         //Debug.Log("Clock Tick: " + _clockTime);
     }
 
+    bool GetPlayerReadyStatus()
+    {
+        return ByronActive || SmokeyActive;
+    }
+
+    public void UpdatePlayer(string player, bool playerState)
+    {
+        if (player == "Byron")
+        {
+            ByronActive = playerState;
+        }
+        if (player == "Smokey")
+        {
+            SmokeyActive = playerState;
+        }
+        if (GetPlayerReadyStatus() && !_gameRunning)
+        {
+            StartGame();
+        }
+    }
+
     void PlayGame()
     {
+        TimersManager.ClearTimer(UpdateClock);
         ByronWinner.SetActive(false);
         SmokeyWinner.SetActive(false);
         Tie.SetActive(false);
@@ -81,11 +110,16 @@ public class GameManager : AudioEvents {
     {
         _clockTime = Countdown;
         Instructions.SetActive(true);
-        UpdateClock();
+        _instructionsTimerText.text = Countdown.ToString(CultureInfo.InvariantCulture);
+        if (GetPlayerReadyStatus())
+        {
+            StartGame();
+        }
     }
 
     void EndGame()
     {
+        _gameRunning = false;
         GameObject.Find("ByronEmitter").GetComponent<BallEmitter>().StopEmitting();
         GameObject.Find("SmokeyEmitter").GetComponent<BallEmitter>().StopEmitting();
         foreach (var acorn in GameObject.FindGameObjectsWithTag("Acorn"))

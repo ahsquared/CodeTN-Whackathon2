@@ -32,16 +32,29 @@ public class AudioEvents : MonoBehaviour {
         }
     }
 
+    public void PlayEvent(string eventName, GameObject gObject, bool callback = false)
+    {
+        if (callback)
+        {
+            AkSoundEngine.PostEvent(eventName, gObject,
+                (uint)AkCallbackType.AK_MusicSyncUserCue | (uint)AkCallbackType.AK_EndOfEvent, MusicCallback, this);
+        }
+        else
+        {
+            AkSoundEngine.PostEvent(eventName, gObject);
+        }
+    }
+
     private void MusicCallback(object in_cookie, AkCallbackType in_type, object in_info)
     {
 
         if (in_type == AkCallbackType.AK_MusicSyncUserCue)
         {
-            Debug.Log(in_cookie);
-            Debug.Log(in_type);
-            Debug.Log(in_info);
+            //Debug.Log(in_cookie);
+            //Debug.Log(in_type);
+            //Debug.Log(in_info);
             AkCallbackManager.AkMusicSyncCallbackInfo musicInfo = (AkCallbackManager.AkMusicSyncCallbackInfo) in_info;
-            Debug.Log("cue time: " + musicInfo.segmentInfo.iCurrentPosition + " , duration: " + musicInfo.segmentInfo.iActiveDuration);
+            //Debug.Log("cue time: " + musicInfo.segmentInfo.iCurrentPosition + " , duration: " + musicInfo.segmentInfo.iActiveDuration);
             int cueTime = musicInfo.segmentInfo.iCurrentPosition;
             int duration = musicInfo.segmentInfo.iActiveDuration;
             
@@ -65,7 +78,7 @@ public class AudioEvents : MonoBehaviour {
     }
     void tweenTimeStretch(int newValue)
     {
-        Debug.Log("time stretch: " + newValue);
+        //Debug.Log("time stretch: " + newValue);
         SetRTPCValue("GamePercentage", (float)newValue);
     }
 
@@ -74,6 +87,13 @@ public class AudioEvents : MonoBehaviour {
         var eventId = AkSoundEngine.GetIDFromString(eventName);
         AkSoundEngine.ExecuteActionOnEvent(eventId, AkActionOnEventType.AkActionOnEventType_Stop, gameObject,
             (int) (fadeOut * 1000), AkCurveInterpolation.AkCurveInterpolation_Sine);
+    }
+
+    public void StopEvent(string eventName, GameObject gObject, float fadeOut)
+    {
+        var eventId = AkSoundEngine.GetIDFromString(eventName);
+        AkSoundEngine.ExecuteActionOnEvent(eventId, AkActionOnEventType.AkActionOnEventType_Stop, gObject,
+            (int)(fadeOut * 1000), AkCurveInterpolation.AkCurveInterpolation_Sine);
     }
 
     public void SetRTPCValue(string rtpcName, float value)

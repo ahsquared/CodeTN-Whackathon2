@@ -27,7 +27,8 @@
 				<Event Id="3886820807" Name="Birdsong" ObjectPath="\Events\Default Work Unit\Birdsong"/>
 				<Event Id="1443984213" Name="Crickets" ObjectPath="\Events\Default Work Unit\Crickets"/>
 				<Event Id="2317268941" Name="Play_Bear_Facts_30_SEC_LOOP" ObjectPath="\Events\Default Work Unit\Play_Bear_Facts_30_SEC_LOOP"/>
-				<Event Id="2830079466" Name="Play_Feet" ObjectPath="\Events\Default Work Unit\Play_Feet"/>
+				<Event Id="2869295439" Name="Play_Feet_Byron" ObjectPath="\Events\Default Work Unit\Play_Feet_Byron"/>
+				<Event Id="4214561933" Name="Play_Feet_Smokey" ObjectPath="\Events\Default Work Unit\Play_Feet_Smokey"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="221277929" Language="SFX">

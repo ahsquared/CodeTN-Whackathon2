@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID BIRDSONG = 3886820807U;
         static const AkUniqueID CRICKETS = 1443984213U;
         static const AkUniqueID PLAY_BEAR_FACTS_30_SEC_LOOP = 2317268941U;
+        static const AkUniqueID PLAY_BEAR_WAITING = 1879363828U;
         static const AkUniqueID PLAY_FEET_BYRON = 2869295439U;
         static const AkUniqueID PLAY_FEET_SMOKEY = 4214561933U;
     } // namespace EVENTS

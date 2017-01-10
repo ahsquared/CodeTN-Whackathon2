@@ -91,6 +91,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Bear_WAITING" ID="{F2BCF977-B496-432B-8A8F-1381A8E62F8C}">
+					<ChildrenList>
+						<Action Name="Play" ID="{E603AB97-A58F-4369-9BC3-1F4EA7EB2B4B}" ShortID="430096567" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{92D001DC-54CC-4611-BAD5-4CBF1C676F2A}" Global="false">
+									<ObjectRef Name="Bear WAITING" ID="{D6AE6B73-FB94-4863-80CF-F4E8C1C92DF4}" WorkUnitID="{2CBB8001-6D70-40E4-B0BC-1F0AE12736D4}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -40,6 +40,7 @@ public class GameManager : AudioEvents
     private void PlayAmbientSound()
     {
         PlayEvent("Crickets");
+        PlayEvent("Play_Bear_WAITING");
     }
 
     // Update is called once per frame
@@ -53,6 +54,7 @@ public class GameManager : AudioEvents
         _smokeyScore = 0;
         _clockTime = Countdown;
         TimersManager.SetLoopableTimer(this, 1.0f, UpdateClock);
+        StopEvent("Play_Bear_WAITING", Countdown);
         _gameRunning = true;
         _kinectManager.displayUserMap = false;
     }
@@ -114,6 +116,7 @@ public class GameManager : AudioEvents
     {
         _clockTime = Countdown;
         Instructions.SetActive(true);
+        PlayEvent("Play_Bear_WAITING");
         _instructionsTimerText.text = Countdown.ToString(CultureInfo.InvariantCulture);
         _kinectManager.displayUserMap = true;
         if (GetPlayerReadyStatus())

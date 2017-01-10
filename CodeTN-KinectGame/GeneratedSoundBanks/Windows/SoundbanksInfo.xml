@@ -27,6 +27,7 @@
 				<Event Id="3886820807" Name="Birdsong" ObjectPath="\Events\Default Work Unit\Birdsong"/>
 				<Event Id="1443984213" Name="Crickets" ObjectPath="\Events\Default Work Unit\Crickets"/>
 				<Event Id="2317268941" Name="Play_Bear_Facts_30_SEC_LOOP" ObjectPath="\Events\Default Work Unit\Play_Bear_Facts_30_SEC_LOOP"/>
+				<Event Id="1879363828" Name="Play_Bear_WAITING" ObjectPath="\Events\Default Work Unit\Play_Bear_WAITING"/>
 				<Event Id="2869295439" Name="Play_Feet_Byron" ObjectPath="\Events\Default Work Unit\Play_Feet_Byron"/>
 				<Event Id="4214561933" Name="Play_Feet_Smokey" ObjectPath="\Events\Default Work Unit\Play_Feet_Smokey"/>
 			</IncludedEvents>
@@ -74,6 +75,10 @@
 				<File Id="970200051" Language="SFX">
 					<ShortName>VSFX033_01Lip Pop.aif.wav</ShortName>
 					<Path>SFX\VSFX033_01Lip Pop.aif_9E69E797.wem</Path>
+				</File>
+				<File Id="1057391246" Language="SFX">
+					<ShortName>Bear WAITING.wav</ShortName>
+					<Path>SFX\Bear WAITING_4B8CC0C5.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

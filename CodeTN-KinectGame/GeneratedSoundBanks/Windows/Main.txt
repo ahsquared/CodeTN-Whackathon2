@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	253386786	AcornHits			\Default Work Unit\AcornHits	
 	1443984213	Crickets			\Default Work Unit\Crickets	
+	1879363828	Play_Bear_WAITING			\Default Work Unit\Play_Bear_WAITING	
 	2000967603	BearWin			\Default Work Unit\BearWin	
 	2317268941	Play_Bear_Facts_30_SEC_LOOP			\Default Work Unit\Play_Bear_Facts_30_SEC_LOOP	
 	2632570123	AcornHit			\Default Work Unit\AcornHit	
@@ -29,4 +30,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	772259859	VSFX005_05Footsteps Through The Woods_aif	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\VSFX005_05Footsteps Through The Woods.aif_80C5C184.wem		\Actor-Mixer Hierarchy\Default Work Unit\Feet\VSFX005_05Footsteps Through The Woods_aif		121172
 	878642591	368606__samsterbirdies__thump	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\368606__samsterbirdies__thump_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\368606__samsterbirdies__thump		13724
 	970200051	VSFX033_01Lip Pop_aif	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\VSFX033_01Lip Pop.aif_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\AcornHits\VSFX033_01Lip Pop_aif		229440
+	1057391246	Bear WAITING	D:\CodeTN Kinect Game\CodeTN-KinectGame\.cache\Windows\SFX\Bear WAITING_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bear WAITING		6912068
 

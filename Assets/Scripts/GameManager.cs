@@ -31,10 +31,9 @@ public class GameManager : AudioEvents
     void Start ()
     {
         _kinectManager = GameObject.Find("KinectController").GetComponent<KinectManager>();
-        _instructionsTimerText = GameObject.Find("InstructionsTimer").GetComponent<Text>();
+        _instructionsTimerText = Instructions.GetComponentInChildren<Text>();
         _instructionsTimerText.text = Countdown.ToString(CultureInfo.InvariantCulture);
         PlayAmbientSound();
-        //StartGame();
     }
 
     private void PlayAmbientSound()
@@ -50,13 +49,15 @@ public class GameManager : AudioEvents
 
     void StartGame()
     {
+        HideSponsors();
         _byronScore = 0;
         _smokeyScore = 0;
         _clockTime = Countdown;
+        HideSponsors();
+        ShowInstructions(true);
         TimersManager.SetLoopableTimer(this, 1.0f, UpdateClock);
         StopEvent("Play_Bear_WAITING", Countdown);
         _gameRunning = true;
-        _kinectManager.displayUserMap = false;
     }
 
     void UpdateClock()
@@ -90,6 +91,7 @@ public class GameManager : AudioEvents
         }
         if (GetPlayerReadyStatus() && !_gameRunning)
         {
+            ResetGame();
             StartGame();
         }
     }
@@ -97,14 +99,10 @@ public class GameManager : AudioEvents
     void PlayGame()
     {
         TimersManager.ClearTimer(UpdateClock);
-        ByronWinner.SetActive(false);
-        SmokeyWinner.SetActive(false);
-        Tie.SetActive(false);
-        Sponsors.SetActive(false);
-        _byronScore = 0;
-        _smokeyScore = 0;
+        HideSponsors();
         ResetScores();
-        Instructions.SetActive(false);
+        _kinectManager.displayUserMap = false;
+        ShowInstructions(false);
         SetRTPCValue("GameTime", 0);
         PlayEvent("Play_Bear_Facts_30_SEC_LOOP", true);
         GameObject.Find("ByronEmitter").GetComponent<BallEmitter>().StartEmitting();
@@ -115,14 +113,18 @@ public class GameManager : AudioEvents
     void ResetGame()
     {
         _clockTime = Countdown;
-        Instructions.SetActive(true);
-        PlayEvent("Play_Bear_WAITING");
         _instructionsTimerText.text = Countdown.ToString(CultureInfo.InvariantCulture);
-        _kinectManager.displayUserMap = true;
-        if (GetPlayerReadyStatus())
-        {
-            StartGame();
-        }
+        ShowInstructions(true);
+        //if (GetPlayerReadyStatus())
+        //{
+        //    StartGame();
+        //}
+    }
+
+    void ResetPlayers()
+    {
+        ByronActive = false;
+        SmokeyActive = false;
     }
 
     void EndGame()
@@ -136,6 +138,11 @@ public class GameManager : AudioEvents
         }
         Debug.Log("End Game (B vs S) " + _byronScore + " to " + _smokeyScore);
         ShowWinner();
+    }
+
+    void ShowInstructions(bool show)
+    {
+        Instructions.SetActive(show);
     }
 
     void ShowWinner()
@@ -152,7 +159,28 @@ public class GameManager : AudioEvents
             Tie.SetActive(true);
         }
         PlayEvent("BearWin");
-        TimersManager.SetTimer(this, 5f, ResetGame);
+        TimersManager.SetTimer(this, 5f, ShowSponsors);
+    }
+
+    void HideWinner()
+    {
+        ByronWinner.SetActive(false);
+        SmokeyWinner.SetActive(false);
+        Tie.SetActive(false);
+    }
+
+    void ShowSponsors()
+    {
+        HideWinner();
+        Sponsors.SetActive(true);
+        _kinectManager.displayUserMap = true;
+        PlayEvent("Play_Bear_WAITING");
+        ResetPlayers();
+    }
+
+    void HideSponsors()
+    {
+        Sponsors.SetActive(false);
     }
 
     public void UpdateScore(string playerName)
@@ -171,7 +199,9 @@ public class GameManager : AudioEvents
 
     public void ResetScores()
     {
-        GameObject.Find("ByronText").GetComponent<Text>().text = "0";
-        GameObject.Find("SmokeyText").GetComponent<Text>().text = "0";
+        _byronScore = 0;
+        _smokeyScore = 0;
+        GameObject.Find("ByronText").GetComponent<Text>().text = _byronScore.ToString();
+        GameObject.Find("SmokeyText").GetComponent<Text>().text = _smokeyScore.ToString();
     }
 }

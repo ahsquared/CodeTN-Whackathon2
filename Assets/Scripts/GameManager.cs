@@ -123,6 +123,9 @@ public class GameManager : AudioEvents
 
     void ResetPlayers()
     {
+        // remove all users, filters and avatar controllers
+        _kinectManager.avatarControllers.Clear();
+        _kinectManager.ClearKinectUsers();
         ByronActive = false;
         SmokeyActive = false;
     }

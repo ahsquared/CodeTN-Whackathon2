@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
@@ -54,7 +55,6 @@ public class GameManager : AudioEvents
         _smokeyScore = 0;
         _clockTime = Countdown;
         HideSponsors();
-        ShowInstructions(true);
         TimersManager.SetLoopableTimer(this, 1.0f, UpdateClock);
         StopEvent("Play_Bear_WAITING", Countdown);
         _gameRunning = true;
@@ -134,7 +134,7 @@ public class GameManager : AudioEvents
         GameObject.Find("SmokeyEmitter").GetComponent<BallEmitter>().StopEmitting();
         foreach (var acorn in GameObject.FindGameObjectsWithTag("Acorn"))
         {
-            Destroy(acorn);
+             Destroy(acorn);
         }
         Debug.Log("End Game (B vs S) " + _byronScore + " to " + _smokeyScore);
         ShowWinner();
@@ -142,7 +142,38 @@ public class GameManager : AudioEvents
 
     void ShowInstructions(bool show)
     {
-        Instructions.SetActive(show);
+        if (show)
+        {
+            Instructions.SetActive(true);
+            FadeInGameObject(Instructions);
+        }
+        else
+        {
+            FadeOutGameObject(Instructions);
+        }
+    }
+
+    void FadeInGameObject(GameObject obj)
+    {
+        //iTween.Stop(obj);
+        iTween.ValueTo(obj, iTween.Hash("from", 0, "to", 1, "time", 1f, "onUpdate", "SetObjectAlpha"));
+    }
+
+    void FadeOutGameObject(GameObject obj)
+    {
+        Debug.Log("fade out instructions");
+        //iTween.Stop(obj);
+        iTween.ValueTo(obj, iTween.Hash("delay", 0, "from", 1, "to", 0, "time", 1f, "onUpdate", "SetObjectAlpha", "onUpdateParams", iTween.Hash("obj", obj), "onUpdateTarget", gameObject));
+    }
+
+    void SetObjectAlpha(float alpha, Hashtable args)
+    {
+        Debug.Log("params: " + alpha + ", args" + args);
+        //var canvases = obj.GetComponentsInChildren<CanvasRenderer>();
+        //foreach (var canvasRenderer in canvases)
+        //{
+        //    canvasRenderer.SetAlpha(alpha);
+        //}
     }
 
     void ShowWinner()

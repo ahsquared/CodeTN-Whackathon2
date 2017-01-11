@@ -6,17 +6,14 @@ public class Ball : AudioEvents {
     [Range(0,5)]
     public float ForceMultiplier = 1f;
 
+    private Material _mat;
+    private Rigidbody _rigidbody;
+    private bool _hasBeenStruck;
+
     // Use this for initialization
     void Start()
     {
-        float size = Random.Range(0.4f, 1f);
-
         iTween.FadeTo(gameObject, iTween.Hash("delay", 5f, "alpha", 1f, "time", 1f, "oncomplete", "Remove"));
-        //iTween.ScaleTo(gameObject, iTween.Hash("delay", 5f, "scale", new Vector3(0, 0, 0), "time", 4f, "oncomplete", "Remove", "easeType", "easeInOutQuad"));
-
-        //gameObject.GetComponent<Transform>().localScale = new Vector3(size, size, size);
-        //gameObject.GetComponent<Rigidbody>().isKinematic = true;
-        //StartCoroutine(LaunchBall(1.5f));
     }
 
     private void Remove () {
@@ -30,6 +27,7 @@ public class Ball : AudioEvents {
 
     void OnCollisionEnter(Collision collision)
     {
+        
         if (collision.gameObject.name == "Byron" ||
             collision.gameObject.name == "Smokey" || 
             collision.gameObject.name == "LeftHand" || 
@@ -37,20 +35,23 @@ public class Ball : AudioEvents {
             collision.gameObject.name == "LeftFoot" ||
             collision.gameObject.name == "RightFoot")
         {
-            //Debug.Log("Collided with: " + collision.gameObject.name);
-            //gameObject.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
-            gameObject.GetComponentInChildren<MeshRenderer>().material.SetColor("_EmissionColor", new Color(0.964f, 0.8f, 0.262f));
-            gameObject.GetComponent<Rigidbody>().AddForce(collision.impulse, ForceMode.Impulse);
-            GameObject.Find("GameManager").GetComponent<GameManager>().UpdateScore(collision.gameObject.name);
+            // make a sound
             PlayEvent("AcornHits");
+            // if we haven't used this one yet color it and update the score
+            if (_hasBeenStruck)
+            {
+                return;
+            }
+            //Debug.Log("Collided with: " + collision.gameObject.name);
+            //mat.SetColor("_EmissionColor", new Color(0.964f, 0.8f, 0.262f));
+            _mat = gameObject.GetComponentInChildren<MeshRenderer>().material;
+            _rigidbody = gameObject.GetComponent<Rigidbody>();
+            _mat.SetTexture("_EmissionMap", new Texture2D(1,1));
+            _mat.SetColor("_EmissionColor", new Color(0.897f, 0.664f, 0.066f));
+            _rigidbody.AddForce(collision.impulse, ForceMode.Impulse);
+            GameObject.Find("GameManager").GetComponent<GameManager>().UpdateScore(collision.gameObject.name);
+            _hasBeenStruck = true;
         }
     }
-
-    private IEnumerator LaunchBall(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-        gameObject.GetComponent<Rigidbody>().isKinematic = false;
-        gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1f, 1f) * ForceMultiplier, 0, Random.Range(-1f, 1f) * ForceMultiplier), ForceMode.Impulse);
-
-    }
+    
 }

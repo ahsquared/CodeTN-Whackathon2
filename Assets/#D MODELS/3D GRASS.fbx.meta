@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 6a06e9e2f85ca1b4e8c6e29cb8dc2623
+timeCreated: 1484075897
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: CINEMA_4D_Editor
+    100004: SCATTERED_GRASS
+    100006: SCATTERED_GRASS_MeshPart0
+    100008: SCATTERED_GRASS_MeshPart1
+    100010: SCATTERED_GRASS_MeshPart10
+    100012: SCATTERED_GRASS_MeshPart11
+    100014: SCATTERED_GRASS_MeshPart12
+    100016: SCATTERED_GRASS_MeshPart13
+    100018: SCATTERED_GRASS_MeshPart14
+    100020: SCATTERED_GRASS_MeshPart15
+    100022: SCATTERED_GRASS_MeshPart16
+    100024: SCATTERED_GRASS_MeshPart17
+    100026: SCATTERED_GRASS_MeshPart18
+    100028: SCATTERED_GRASS_MeshPart19
+    100030: SCATTERED_GRASS_MeshPart2
+    100032: SCATTERED_GRASS_MeshPart20
+    100034: SCATTERED_GRASS_MeshPart21
+    100036: SCATTERED_GRASS_MeshPart22
+    100038: SCATTERED_GRASS_MeshPart3
+    100040: SCATTERED_GRASS_MeshPart4
+    100042: SCATTERED_GRASS_MeshPart5
+    100044: SCATTERED_GRASS_MeshPart6
+    100046: SCATTERED_GRASS_MeshPart7
+    100048: SCATTERED_GRASS_MeshPart8
+    100050: SCATTERED_GRASS_MeshPart9
+    400000: //RootNode
+    400002: CINEMA_4D_Editor
+    400004: SCATTERED_GRASS
+    400006: SCATTERED_GRASS_MeshPart0
+    400008: SCATTERED_GRASS_MeshPart1
+    400010: SCATTERED_GRASS_MeshPart10
+    400012: SCATTERED_GRASS_MeshPart11
+    400014: SCATTERED_GRASS_MeshPart12
+    400016: SCATTERED_GRASS_MeshPart13
+    400018: SCATTERED_GRASS_MeshPart14
+    400020: SCATTERED_GRASS_MeshPart15
+    400022: SCATTERED_GRASS_MeshPart16
+    400024: SCATTERED_GRASS_MeshPart17
+    400026: SCATTERED_GRASS_MeshPart18
+    400028: SCATTERED_GRASS_MeshPart19
+    400030: SCATTERED_GRASS_MeshPart2
+    400032: SCATTERED_GRASS_MeshPart20
+    400034: SCATTERED_GRASS_MeshPart21
+    400036: SCATTERED_GRASS_MeshPart22
+    400038: SCATTERED_GRASS_MeshPart3
+    400040: SCATTERED_GRASS_MeshPart4
+    400042: SCATTERED_GRASS_MeshPart5
+    400044: SCATTERED_GRASS_MeshPart6
+    400046: SCATTERED_GRASS_MeshPart7
+    400048: SCATTERED_GRASS_MeshPart8
+    400050: SCATTERED_GRASS_MeshPart9
+    2300000: SCATTERED_GRASS_MeshPart0
+    2300002: SCATTERED_GRASS_MeshPart1
+    2300004: SCATTERED_GRASS_MeshPart10
+    2300006: SCATTERED_GRASS_MeshPart11
+    2300008: SCATTERED_GRASS_MeshPart12
+    2300010: SCATTERED_GRASS_MeshPart13
+    2300012: SCATTERED_GRASS_MeshPart14
+    2300014: SCATTERED_GRASS_MeshPart15
+    2300016: SCATTERED_GRASS_MeshPart16
+    2300018: SCATTERED_GRASS_MeshPart17
+    2300020: SCATTERED_GRASS_MeshPart18
+    2300022: SCATTERED_GRASS_MeshPart19
+    2300024: SCATTERED_GRASS_MeshPart2
+    2300026: SCATTERED_GRASS_MeshPart20
+    2300028: SCATTERED_GRASS_MeshPart21
+    2300030: SCATTERED_GRASS_MeshPart22
+    2300032: SCATTERED_GRASS_MeshPart3
+    2300034: SCATTERED_GRASS_MeshPart4
+    2300036: SCATTERED_GRASS_MeshPart5
+    2300038: SCATTERED_GRASS_MeshPart6
+    2300040: SCATTERED_GRASS_MeshPart7
+    2300042: SCATTERED_GRASS_MeshPart8
+    2300044: SCATTERED_GRASS_MeshPart9
+    3300000: SCATTERED_GRASS_MeshPart0
+    3300002: SCATTERED_GRASS_MeshPart1
+    3300004: SCATTERED_GRASS_MeshPart10
+    3300006: SCATTERED_GRASS_MeshPart11
+    3300008: SCATTERED_GRASS_MeshPart12
+    3300010: SCATTERED_GRASS_MeshPart13
+    3300012: SCATTERED_GRASS_MeshPart14
+    3300014: SCATTERED_GRASS_MeshPart15
+    3300016: SCATTERED_GRASS_MeshPart16
+    3300018: SCATTERED_GRASS_MeshPart17
+    3300020: SCATTERED_GRASS_MeshPart18
+    3300022: SCATTERED_GRASS_MeshPart19
+    3300024: SCATTERED_GRASS_MeshPart2
+    3300026: SCATTERED_GRASS_MeshPart20
+    3300028: SCATTERED_GRASS_MeshPart21
+    3300030: SCATTERED_GRASS_MeshPart22
+    3300032: SCATTERED_GRASS_MeshPart3
+    3300034: SCATTERED_GRASS_MeshPart4
+    3300036: SCATTERED_GRASS_MeshPart5
+    3300038: SCATTERED_GRASS_MeshPart6
+    3300040: SCATTERED_GRASS_MeshPart7
+    3300042: SCATTERED_GRASS_MeshPart8
+    3300044: SCATTERED_GRASS_MeshPart9
+    4300000: SCATTERED_GRASS_MeshPart0
+    4300002: SCATTERED_GRASS_MeshPart1
+    4300004: SCATTERED_GRASS_MeshPart2
+    4300006: SCATTERED_GRASS_MeshPart3
+    4300008: SCATTERED_GRASS_MeshPart4
+    4300010: SCATTERED_GRASS_MeshPart5
+    4300012: SCATTERED_GRASS_MeshPart6
+    4300014: SCATTERED_GRASS_MeshPart7
+    4300016: SCATTERED_GRASS_MeshPart8
+    4300018: SCATTERED_GRASS_MeshPart9
+    4300020: SCATTERED_GRASS_MeshPart10
+    4300022: SCATTERED_GRASS_MeshPart11
+    4300024: SCATTERED_GRASS_MeshPart12
+    4300026: SCATTERED_GRASS_MeshPart13
+    4300028: SCATTERED_GRASS_MeshPart14
+    4300030: SCATTERED_GRASS_MeshPart15
+    4300032: SCATTERED_GRASS_MeshPart16
+    4300034: SCATTERED_GRASS_MeshPart17
+    4300036: SCATTERED_GRASS_MeshPart18
+    4300038: SCATTERED_GRASS_MeshPart19
+    4300040: SCATTERED_GRASS_MeshPart20
+    4300042: SCATTERED_GRASS_MeshPart21
+    4300044: SCATTERED_GRASS_MeshPart22
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

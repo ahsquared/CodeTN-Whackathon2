@@ -34,7 +34,7 @@ public class BallEmitter : MonoBehaviour
     {
         while (_emit)
         {
-            float size = Random.Range(0.4f, 1f);
+            float size = Random.Range(0.1f, 0.2f);
             var go = Instantiate(Go, _emitterLocation, Quaternion.identity);
             go.GetComponent<Transform>().localScale = new Vector3(size, size, size);
             go.GetComponent<Rigidbody>().isKinematic = true;
@@ -49,7 +49,7 @@ public class BallEmitter : MonoBehaviour
         if (_emit)
         {
             go.GetComponent<Rigidbody>().isKinematic = false;
-            //go.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1f, 1f) * ForceMultiplier, 0, Random.Range(0f, 1f) * ForceMultiplier), ForceMode.Impulse);
+            go.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1f, 1f) * ForceMultiplier, 0, Random.Range(0f, 1f) * ForceMultiplier), ForceMode.Impulse);
         }
 
     }

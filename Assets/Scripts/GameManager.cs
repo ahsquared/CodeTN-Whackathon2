@@ -98,9 +98,10 @@ public class GameManager : AudioEvents
         TimersManager.ClearTimer(UpdateClock);
         HideSponsors();
         ResetScores();
-        _kinectManager.displayUserMap = false;
+        //_kinectManager.displayUserMap = false;
         ShowInstructions(false);
         SetRTPCValue("GameTime", 0);
+        StopEvent("Play_Game_Waiting", 1f);
         PlayEvent("Play_Bear_Facts_30_SEC_LOOP", true);
         GameObject.Find("ByronEmitter").GetComponent<BallEmitter>().StartEmitting();
         GameObject.Find("SmokeyEmitter").GetComponent<BallEmitter>().StartEmitting();
@@ -118,7 +119,7 @@ public class GameManager : AudioEvents
     void ResetPlayers()
     {
         // remove all users, filters and avatar controllers
-        _kinectManager.avatarControllers.Clear();
+        //_kinectManager.avatarControllers.Clear();
         _kinectManager.ClearKinectUsers();
         ByronActive = false;
         SmokeyActive = false;
@@ -126,7 +127,6 @@ public class GameManager : AudioEvents
 
     void EndGame()
     {
-        _gameRunning = false;
         GameObject.Find("ByronEmitter").GetComponent<BallEmitter>().StopEmitting();
         GameObject.Find("SmokeyEmitter").GetComponent<BallEmitter>().StopEmitting();
         foreach (var acorn in GameObject.FindGameObjectsWithTag("Acorn"))
@@ -172,6 +172,7 @@ public class GameManager : AudioEvents
         Sponsors.SetActive(true);
         _kinectManager.displayUserMap = true;
         PlayEvent("Play_Game_Waiting");
+        _gameRunning = false;
         ResetPlayers();
     }
 

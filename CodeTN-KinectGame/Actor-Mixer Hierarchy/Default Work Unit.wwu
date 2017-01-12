@@ -853,6 +853,73 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<Sound Name="BEAR GAME LOOP MUSIC (LESS)" ID="{935E2042-5818-478D-B8B9-E0E03BAC0500}" ShortID="974900414" Type="SoundFX">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BEAR GAME LOOP MUSIC (LESS)" ID="{686B2686-04AD-447F-A170-EE4159F3AFDF}" ShortID="975590336">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>BEAR GAME LOOP MUSIC (LESS).wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BEAR GAME LOOP MUSIC (LESS)" ID="{686B2686-04AD-447F-A170-EE4159F3AFDF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BEAR GAME WINNER!!! (NEW) ALT" ID="{5E48E5EE-22E6-4799-BAB5-16D8D12D76A9}" ShortID="430278500" Type="SoundFX">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BEAR GAME WINNER!!! (NEW) ALT" ID="{90CF288A-8EAC-4353-B05D-480AD0F9A707}" ShortID="415205665">
+							<Language>SFX</Language>
+							<AudioFile>BEAR GAME WINNER!!! (NEW) ALT.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BEAR GAME WINNER!!! (NEW) ALT" ID="{90CF288A-8EAC-4353-B05D-480AD0F9A707}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BEAR GAME WINNER!!! (NEW)" ID="{BD24EC39-1594-4F11-8530-F9159B380265}" ShortID="227324168" Type="SoundFX">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{195DAF06-5752-495E-B5FA-81F07A478AA2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E9B9368E-EA27-4754-A62E-4777D62E8935}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BEAR GAME WINNER!!! (NEW)" ID="{81354DF3-3140-4A49-AE15-0E48698BAC86}" ShortID="676191066">
+							<Language>SFX</Language>
+							<AudioFile>BEAR GAME WINNER!!! (NEW).wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BEAR GAME WINNER!!! (NEW)" ID="{81354DF3-3140-4A49-AE15-0E48698BAC86}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

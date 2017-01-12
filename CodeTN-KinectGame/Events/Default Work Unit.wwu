@@ -69,17 +69,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="BearWin" ID="{E9084D75-1CFD-4B59-B146-D1483F69C3B5}">
-					<ChildrenList>
-						<Action Name="Play" ID="{3A8D1444-FFE1-4AFE-BD73-77A23BBF3443}" ShortID="265914669" Type="Play" Scope="One" Global="false">
-							<ElementList>
-								<Element ID="{8728BA27-C377-4C43-B513-74D13959D18B}" Global="false">
-									<ObjectRef Name="WINNINGSFX_BEARGAME" ID="{782DAD23-A84D-4D83-A890-3717E85CF0C9}" WorkUnitID="{2CBB8001-6D70-40E4-B0BC-1F0AE12736D4}"/>
-								</Element>
-							</ElementList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Feet_Smokey" ID="{C3F5F1CB-D095-4A04-94FE-38D16937A712}">
 					<ChildrenList>
 						<Action Name="Play" ID="{B4B6FFEC-C6A6-4FD7-87C1-584E328D5D06}" ShortID="1066250555" Type="Play" Scope="One" Global="false">
@@ -91,12 +80,23 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Bear_WAITING" ID="{F2BCF977-B496-432B-8A8F-1381A8E62F8C}">
+				<Event Name="Play_Game_Waiting" ID="{58E37431-B081-4F83-AB6F-FFB4F59B48D6}">
 					<ChildrenList>
-						<Action Name="Play" ID="{E603AB97-A58F-4369-9BC3-1F4EA7EB2B4B}" ShortID="430096567" Type="Play" Scope="One" Global="false">
+						<Action Name="Play" ID="{2E241122-578F-4D77-BE67-0FCE0F0FB0BE}" ShortID="597289493" Type="Play" Scope="One" Global="false">
 							<ElementList>
-								<Element ID="{92D001DC-54CC-4611-BAD5-4CBF1C676F2A}" Global="false">
-									<ObjectRef Name="Bear WAITING" ID="{D6AE6B73-FB94-4863-80CF-F4E8C1C92DF4}" WorkUnitID="{2CBB8001-6D70-40E4-B0BC-1F0AE12736D4}"/>
+								<Element ID="{3CD0F11C-7A9A-4FF7-BA9A-903BD3C9538F}" Global="false">
+									<ObjectRef Name="BEAR GAME LOOP MUSIC (LESS)" ID="{935E2042-5818-478D-B8B9-E0E03BAC0500}" WorkUnitID="{2CBB8001-6D70-40E4-B0BC-1F0AE12736D4}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Game_winner" ID="{5F6710C5-2ADA-41E1-A718-BC3FD7941F69}">
+					<ChildrenList>
+						<Action Name="Play" ID="{DE7914E9-308E-40EE-B31D-1561E89CD68A}" ShortID="312836696" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{25556ABF-72A6-4C0E-8BC0-C0B2A315A3D2}" Global="false">
+									<ObjectRef Name="BEAR GAME WINNER!!! (NEW) ALT" ID="{5E48E5EE-22E6-4799-BAB5-16D8D12D76A9}" WorkUnitID="{2CBB8001-6D70-40E4-B0BC-1F0AE12736D4}"/>
 								</Element>
 							</ElementList>
 						</Action>

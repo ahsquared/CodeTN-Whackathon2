@@ -39,7 +39,7 @@ public class GameManager : AudioEvents
     private void PlayAmbientSound()
     {
         PlayEvent("Crickets");
-        PlayEvent("Play_Bear_WAITING");
+        PlayEvent("Play_Game_Waiting");
     }
 
     // Update is called once per frame
@@ -49,14 +49,11 @@ public class GameManager : AudioEvents
 
     void StartGame()
     {
-        HideSponsors();
         _byronScore = 0;
         _smokeyScore = 0;
         _clockTime = Countdown;
-        HideSponsors();
-        ShowInstructions(true);
         TimersManager.SetLoopableTimer(this, 1.0f, UpdateClock);
-        StopEvent("Play_Bear_WAITING", Countdown);
+        StopEvent("Play_Game_Waiting", Countdown);
         _gameRunning = true;
     }
 
@@ -114,11 +111,8 @@ public class GameManager : AudioEvents
     {
         _clockTime = Countdown;
         _instructionsTimerText.text = Countdown.ToString(CultureInfo.InvariantCulture);
+        HideSponsors();
         ShowInstructions(true);
-        //if (GetPlayerReadyStatus())
-        //{
-        //    StartGame();
-        //}
     }
 
     void ResetPlayers()
@@ -161,7 +155,7 @@ public class GameManager : AudioEvents
         {
             Tie.SetActive(true);
         }
-        PlayEvent("BearWin");
+        PlayEvent("Play_Game_Winner");
         TimersManager.SetTimer(this, 5f, ShowSponsors);
     }
 
@@ -177,7 +171,7 @@ public class GameManager : AudioEvents
         HideWinner();
         Sponsors.SetActive(true);
         _kinectManager.displayUserMap = true;
-        PlayEvent("Play_Bear_WAITING");
+        PlayEvent("Play_Game_Waiting");
         ResetPlayers();
     }
 

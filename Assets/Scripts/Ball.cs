@@ -3,9 +3,6 @@ using System.Collections;
 
 public class Ball : AudioEvents {
 
-    [Range(0,5)]
-    public float ForceMultiplier = 1f;
-
     private Material _mat;
     private Rigidbody _rigidbody;
     private bool _hasBeenStruck;

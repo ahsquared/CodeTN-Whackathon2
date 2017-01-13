@@ -21,9 +21,12 @@ public class GameManager : AudioEvents
     public int Countdown = 15;
     public GameObject ByronWinner;
     public GameObject SmokeyWinner;
+    private AVProWindowsMediaMovie _byronMovie;
+    private AVProWindowsMediaMovie _smokeyMovie;
     public GameObject Tie;
     public GameObject Instructions;
     public GameObject Sponsors;
+    private AVProWindowsMediaMovie _sponsorsMovie;
     public bool ByronActive;
     public bool SmokeyActive;
 
@@ -33,6 +36,13 @@ public class GameManager : AudioEvents
         _kinectManager = GameObject.Find("KinectController").GetComponent<KinectManager>();
         _instructionsTimerText = Instructions.GetComponentInChildren<Text>();
         _instructionsTimerText.text = Countdown.ToString(CultureInfo.InvariantCulture);
+        _byronMovie = ByronWinner.GetComponentInChildren<AVProWindowsMediaMovie>();
+        _smokeyMovie = SmokeyWinner.GetComponentInChildren<AVProWindowsMediaMovie>();
+        _sponsorsMovie = Sponsors.GetComponentInChildren<AVProWindowsMediaMovie>();
+        _byronMovie.LoadMovie(false);
+        _smokeyMovie.LoadMovie(false);
+        _sponsorsMovie.LoadMovie(false);
+
         PlayAmbientSound();
     }
 
@@ -40,6 +50,7 @@ public class GameManager : AudioEvents
     {
         PlayEvent("Crickets");
         PlayEvent("Play_Game_Waiting");
+        Sponsors.GetComponentInChildren<AVProWindowsMediaMovie>().PlayClip("Intro", false, false);
     }
 
     // Update is called once per frame
@@ -98,7 +109,7 @@ public class GameManager : AudioEvents
         TimersManager.ClearTimer(UpdateClock);
         HideSponsors();
         ResetScores();
-        //_kinectManager.displayUserMap = false;
+        _kinectManager.displayUserMap = false;
         ShowInstructions(false);
         SetRTPCValue("GameTime", 0);
         StopEvent("Play_Game_Waiting", 1f);
@@ -147,16 +158,18 @@ public class GameManager : AudioEvents
         if (_byronScore > _smokeyScore)
         {
             ByronWinner.SetActive(true);
+            ByronWinner.GetComponentInChildren<AVProWindowsMediaMovie>().PlayClip("ByronWinner", false, false);
         } else if (_smokeyScore > _byronScore)
         {
             SmokeyWinner.SetActive(true);
+            SmokeyWinner.GetComponentInChildren<AVProWindowsMediaMovie>().PlayClip("SmokeyWinner", false, false);
         }
         else
         {
             Tie.SetActive(true);
         }
         PlayEvent("Play_Game_Winner");
-        TimersManager.SetTimer(this, 5f, ShowSponsors);
+        TimersManager.SetTimer(this, 8f, ShowSponsors);
     }
 
     void HideWinner()
@@ -170,6 +183,7 @@ public class GameManager : AudioEvents
     {
         HideWinner();
         Sponsors.SetActive(true);
+        Sponsors.GetComponentInChildren<AVProWindowsMediaMovie>().PlayClip("Intro", false, false);
         _kinectManager.displayUserMap = true;
         PlayEvent("Play_Game_Waiting");
         _gameRunning = false;

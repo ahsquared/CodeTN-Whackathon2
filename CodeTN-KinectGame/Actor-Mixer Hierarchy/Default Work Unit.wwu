@@ -716,7 +716,7 @@
 						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-28</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -855,6 +855,7 @@
 				</RandomSequenceContainer>
 				<Sound Name="BEAR GAME LOOP MUSIC (LESS)" ID="{935E2042-5818-478D-B8B9-E0E03BAC0500}" ShortID="974900414" Type="SoundFX">
 					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-6</Value>

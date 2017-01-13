@@ -49,7 +49,7 @@ public class BallEmitter : MonoBehaviour
         if (_emit)
         {
             go.GetComponent<Rigidbody>().isKinematic = false;
-            go.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1f, 1f) * ForceMultiplier, Random.Range(-1f, 1f) * ForceMultiplier, Random.Range(0f, -1f) * ForceMultiplier), ForceMode.Impulse);
+            go.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1f, 1f) * ForceMultiplier, Random.Range(-1f, 1f) * ForceMultiplier, Random.Range(-0.05f, -1.5f) * ForceMultiplier), ForceMode.Impulse);
         }
 
     }

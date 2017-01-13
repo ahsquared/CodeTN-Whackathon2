@@ -39,10 +39,10 @@ public class GameManager : AudioEvents
         _byronMovie = ByronWinner.GetComponentInChildren<AVProWindowsMediaMovie>();
         _smokeyMovie = SmokeyWinner.GetComponentInChildren<AVProWindowsMediaMovie>();
         _sponsorsMovie = Sponsors.GetComponentInChildren<AVProWindowsMediaMovie>();
-        _byronMovie.LoadMovie(false);
-        _smokeyMovie.LoadMovie(false);
-        ByronWinner.SetActive(false);
-        SmokeyWinner.SetActive(false);
+        //_byronMovie.LoadMovie(false);
+        //_smokeyMovie.LoadMovie(false);
+        //ByronWinner.SetActive(false);
+        //SmokeyWinner.SetActive(false);
         _sponsorsMovie.LoadMovie(false);
 
         PlayAmbientSound();
@@ -128,6 +128,7 @@ public class GameManager : AudioEvents
     {
         _clockTime = Countdown;
         _instructionsTimerText.text = Countdown.ToString(CultureInfo.InvariantCulture);
+        HideWinners();
         HideSponsors();
         ShowInstructions(true);
     }
@@ -177,7 +178,7 @@ public class GameManager : AudioEvents
         TimersManager.SetTimer(this, 6f, ShowSponsors);
     }
 
-    void HideWinner()
+    void HideWinners()
     {
         ByronWinner.SetActive(false);
         SmokeyWinner.SetActive(false);
@@ -186,7 +187,7 @@ public class GameManager : AudioEvents
 
     void ShowSponsors()
     {
-        HideWinner();
+        HideWinners();
         Sponsors.SetActive(true);
         _sponsorsMovie.PlayClip("Intro", false, false);
         _kinectManager.displayUserMap = true;

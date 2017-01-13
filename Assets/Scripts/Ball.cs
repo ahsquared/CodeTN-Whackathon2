@@ -7,6 +7,9 @@ public class Ball : AudioEvents {
     private Rigidbody _rigidbody;
     private bool _hasBeenStruck;
 
+    public GameObject HighlightGameObject;
+    public GameObject RegularGameObject;
+
     // Use this for initialization
     void Start()
     {
@@ -45,7 +48,7 @@ public class Ball : AudioEvents {
             _rigidbody = gameObject.GetComponent<Rigidbody>();
             _mat.SetTexture("_EmissionMap", new Texture2D(1,1));
             _mat.SetColor("_EmissionColor", new Color(0.897f, 0.664f, 0.066f));
-            DynamicGI.SetEmissive(gameObject.GetComponent<Renderer>(), new Color(0.897f, 0.664f, 0.066f) * 5);
+            //DynamicGI.SetEmissive(gameObject.GetComponent<Renderer>(), new Color(0.897f, 0.664f, 0.066f) * 5);
             _rigidbody.AddForce(collision.impulse, ForceMode.Impulse);
             GameObject.Find("GameManager").GetComponent<GameManager>().UpdateScore(collision.gameObject.name);
             _hasBeenStruck = true;
